@@ -64,46 +64,54 @@
   		</div>
   	</header>
   	<main class="conteiner">
-      <div class="gallery">
-        <div class="item">
-          <div class="flag flag-new">новинка</div>
-          <div class="item-title">Материалы</div>
-          <div class="item-about">на любой вкус</div>
-          <div class="item-logo"></div>
-        </div>
-         <div class="item">
-          <div class="item-title">Инструмент</div>
-          <div class="item-about">на все случаи</div>
-          <div class="item-logo"></div>
-        </div>
-         <div class="item">
-          <div class="item-title">Техника</div>
-          <div class="item-about">Для стройки</div>
-          <div class="item-logo"></div>
-        </div>
-        <div class="slide">
-          <figure class="gallery-content">
-            <img src="img/photo-1.jpg" width="286" height="164" alt="">
-          </figure>
-            <button class="btn gallery-prev">Назад</button>
-            <button class="btn gallery-next">Вперёд</button>
-            <a href="">Открыть каталог</a>
-        </div>
-        <div class="item new">
-          <div class="item-title">Скидки 50%</div>
-          <div class="item-about">на 350 товаров</div>
-          <div class="item-logo"></div>
-        </div>
-        <div class="item new">
-          <div class="item-title">Доставка</div>
-          <div class="item-about">бесплатно</div>
-          <div class="item-logo"></div>
-        </div>
+      <div class="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">Главная</a>
+          </li>
+          <li>
+            <a href="#">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Инструмент</a>
+          </li>
+          <li>
+            <a class="current">Перфораторы</a>
+          </li>
+        </ul>
       </div>
-      <section class="pop-goods">
-        <div class="pop-main">
-          <span class="pop-title">Популярные товары:</span>
-          <a class="a-pop">Все популярные товары</a>
+      <h1>Перфораторы</h1>
+      <section class="filter">
+        <p class="filter-title">Фильтр</p>
+        <input type="range" min="0" max="1000" step="10" value="50"> 
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <b class="filter-title-brand">Производители:</b>
+            <input id="BOSCH" type='checkbox' name='BOSCH' checked>
+            <label for="BOSCH">BOSCH</label>
+            <input id="interscol" type='checkbox' name='interscol' >
+            <label for="interscol">ИНТЕРСКОЛ</label>
+            <input id="MAKIta" type='checkbox' name='MAKIta' checked>
+            <label for="  MAKIta">MAKIta</label>
+            <input id="Dewalt" type='checkbox' name='Dewalt'>
+            <label for="Dewalt">Dewalt</label>
+            <input id="Hitachi" type='checkbox' name='Hitachi'>
+            <label for="Hitachi">Hitachi</label>
+            <b class="filter-title">Питание:</b>
+            <input id="acum" type="radio" name="product-group" value="acum">
+            <label for="acum">Аккумуляторные</label>
+            <input id="net" type="radio" name="product-group" value="net">
+            <label for="net">Сетевые</label>
+            <button type="submit">Показать</button>
+          </form>
+      </section>
+      <section class="goods">
+        <div class="goods-title">
+          <span>Сортировка</span>
+          <a class="current" href="#">по цене</a>
+          <a href="#">по ттипу</a>
+          <a href="#">по функционалу</a>
+          <button  class="btn-up">up</button>
+          <button class="btn-baun">daun</button>
         </div>
         <article class="catalog-good">
           <div class="actions">
@@ -153,84 +161,61 @@
             <div class="title">Перфоратор BOSCH <br> BFG 2000</div>
             <div class="price">12 500 Р.</div>
           </article>
+          <article class="catalog-good">
+          <div class="actions">
+            <a href="#" class="btn buy">Купить</a>
+            <a href="#" class="btn bookmark">В закладки</a>
+          </div>
+          <div class="image">
+            <img src="http://placehold.it/184x164" width="184" height="164" alt=""  >
+          </div>
+          <div class="title">Перфоратор BOSCH <br> BFG 3000</div>
+            <div class="old-price">22 500 Р.</div>
+            <div class="price">15 500 Р.</div>
+          </article>
+        <article class="catalog-good">
+          <div class="actions">
+            <a href="#" class="btn buy">Купить</a>
+            <a href="#" class="btn bookmark">В закладки</a>
+          </div>
+          <div class="image">
+            <img src="http://placehold.it/184x164" width="184" height="164" alt=""  >
+          </div>
+          <div class="title">Перфоратор BOSCH <br> BFG 6000</div>
+          <div class="old-price">30 500 Р.</div>
+          <div class="price">25 500 Р.</div>
+        </article>
+        <article class="catalog-good">
+          <div class="flag flag-new">новинка</div>
+          <div class="actions">
+            <a href="#" class="btn buy">Купить</a>
+            <a href="#" class="btn bookmark">В закладки</a>
+          </div>
+          <div class="image">
+            <img src="http://placehold.it/184x164" width="184" height="164" alt=""  >
+          </div>
+            <div class="title">Перфоратор BOSCH <br> BFG 2000</div>
+            <div class="price">12 500 Р.</div>
+        </article>
+        <article class="catalog-good">
+          <div class="flag flag-new">новинка</div>
+          <div class="actions">
+            <a href="#" class="btn buy">Купить</a>
+            <a href="#" class="btn bookmark">В закладки</a>
+          </div>
+          <div class="image">
+            <img src="http://placehold.it/184x164" width="184" height="164" alt=""  >
+          </div>
+            <div class="title">Перфоратор BOSCH <br> BFG 2000</div>
+            <div class="price">12 500 Р.</div>
+          </article>
       </section>
-      <section class="pop-brand">
-        <div class="pop-main">
-          <span class="pop-title">Популярные производители:</span>
-          <a class="a-pop">Все производители</a>
+      <div class="paginator">
+            <a class="current" >1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Следующая</a>
         </div>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-        <article class="brand">
-          <img src="http://placehold.it/126x37" width="126" height="37" alt="" >
-        </article>
-      </section>
-      <section class="about">
-        <div class="about-title">
-          Сервисы
-        </div>
-        <p class="about-about">
-          Хороший интернет-магазин отличается от плохого не только ценами!
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <ul class="about-menu">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Кредит</a></li>
-        </ul>
-        <div class="about-title">
-          <h2>Доставка</h2>
-          <p class="about-about">
-            Мы с удовольствием доставим ваш товар прямо 
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем, 
-            поднимая его на ваш на этаж!
-          </p>
-        </div>
-        <div class="about-icon">
-          <img src="http://placehold.it/206x146" width="206" height="146" alt="">
-        </div>
-
-      </section>
-      <section class="map">
-        <a href="" >
-          <img src="http://placehold.it/970x476" width="970" height="476" alt="">
-        </a>
-          <form class="map-form" action="" method="post">
-            <label for='name'>Ваше имя:</label>
-            <br>
-            <input type='text'  id='name' name='name' placeholder="Представьтесь пожалуйста" >
-            <br>
-            <label for='email'>Ваш e-mail:</label>
-            <br>
-            <input type='email' id='email' name='email' >
-            <br>
-            <label for='text'>Текст письма:</label>
-            <br>
-            <textarea rows=  cols= id='text'  name='text'>В свободной форме</textarea>
-            <br>
-            <button class="btn" type="submit">Отправить</button>
-        </form>
-      </section>
   	</main>
 	<footer class="main-footer">
     <div class="footer-head">
