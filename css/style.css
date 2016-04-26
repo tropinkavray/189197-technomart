@@ -13,3 +13,164 @@ h1 {
 h2 {
   font-size: 24px;
 }
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  min-width: 660px;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0 10px;
+  align-items: flex-start;
+}
+.header-buy .conteiner {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main.conteiner {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header-buy .main-logo {
+  flex-grow: 1;
+}
+.header-buy  form {
+  flex-grow: 2;
+}
+.header-buy .buy {
+  flex-grow: 1;
+}
+.buy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main-about {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header-about {
+  flex-grow: 1;
+}
+.header-phone {
+  flex-grow: 1;
+}
+.header-user-block {
+  flex-grow: 1;
+}
+.main-navigation {
+  width: 100%;
+}
+.skyline {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  direction: row;
+}
+.item {
+  width: 300px;
+  height: 123px;
+}
+figure {
+  margin: 0;
+}
+.pop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pop-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.brand {
+  box-sizing: border-box;
+  width: 220px;
+  height: 145px;
+  border: 1px solid #e7e7e7;
+}
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about-about {
+  width: 100%;
+}
+.about-menu {
+  width: 300px;
+}
+.about-main {
+  flex-grow: 1;
+
+  width: 300px;
+}
+.about-icon {
+  width: 300px;
+}
+.map form {
+  display: none;
+}
+.footer-menu,
+.footer-menu-last,
+.footer-contact .conteiner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.breadcrumbs {
+  width: 100%;
+}
+.catalog-title {
+  width: 100%;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  max-width: 220px;
+}
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 700px;
+}
+.goods-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.goods-filter-title {
+  flex-grow: 2;
+}
+.goods-filter {
+  display: flex;
+  flex-grow: 3;
+  justify-content: space-between;
+}
+.catalog-good {
+  width: 220px;
+  height: 320px;
+  border: 1px solid #e7e7e7;
+}
+.actions {
+  display: none;
+}
