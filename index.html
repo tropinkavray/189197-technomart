@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/style.css">
     <title>Техномарт</title>
@@ -13,12 +14,13 @@
             <a class="logo">Техномарт</a>
           </div>
           <form>
+            <label class="search" for="q"></label>
             <input type="search" name="q" placeholder="Поиск:"> 
-            <input type="submit" value="Найти">
+            <input class="q" id="q" type="submit" value="Найти">
           </form>
           <div class="buy">
-            <a class="buy-item" href="#">Закладки</a>
-            <a class="buy-item" href="#">Корзина</a>
+            <a class="buy-item" href="#">Закладки: 0</a>
+            <a class="buy-item" href="#">Корзина: 0</a>
             <a class="buys" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -27,8 +29,8 @@
         <div class="conteiner">
     	    <div class="main-about">
             <div class="header-about">
-              Интернет-магазин<br>
-              строительных материалов<br>
+              Интернет-магазин 
+              строительных материалов 
               и инструментов для ремонта
             </div>
             <div class="header-phone">
@@ -78,41 +80,54 @@
             <img src="./img/item-logo-materials.png" width="44" height="65" alt="">
           </div>
         </div>
-         <div class="item">
+         <div class="item instrument">
           <div class="item-title">Инструмент</div>
           <div class="item-about">на все случаи</div>
           <div class="item-logo">
             <img src="./img/item-logo-tool.png" width="75" height="61" alt="">
           </div>
         </div>
-         <div class="item">
+         <div class="item tehnic">
           <div class="item-title">Техника</div>
           <div class="item-about">Для стройки</div>
           <div class="item-logo">
             <img src="./img/item-logo-technics.png" width="78" height="62" alt="">
           </div>
         </div>
-        <div class="slide">
-          <figure class="gallery-content">
-            <img src="./img/item-slide-1.jpg" width="620" height="266" alt="">
-            
-          </figure>
-            <button class="btn-glr gallery-prev">Назад</button>
-            <button class="btn-glr gallery-next">Вперёд</button>
-            <a class="open-gallery" href="">Открыть каталог</a>
-        </div>
-        <div class="item">
-          <div class="item-title">Скидки 50%</div>
-          <div class="item-about">на 350 товаров</div>
-          <div class="item-logo">
-            <img src="./img/item-logo-discounts.png" width="59" height="72" alt="">
+        <div class="slider">
+          <input type="radio" id="slider-btn-up" name="toggle" checked>
+          <input type="radio" id="slider-btn-daun" name="toggle">
+          <div class="slider-controls">
+            <label class="slider-btn-up" for="slider-btn-up"></label>
+            <label class="slider-btn-daun" for="slider-btn-daun"></label>
           </div>
+          <div class="slider-controls-icon">
+            <label class="slider-icon-up" for="slider-btn-up"></label>
+            <label class="slider-icon-daun" for="slider-btn-daun"></label>
+          </div>
+          <div class="slider-inner">
+            <div class="gallery-content">
+              <img src="./img/item-slide-1.jpg" width="620" height="266" alt="">
+              <img src="./img/item-slide-2.jpg" width="620" height="266" alt="">
+            </div>
+          </div>
+          
+           <a class="open-gallery" href="">Открыть каталог</a>
         </div>
-        <div class="item">
-          <div class="item-title">Доставка</div>
-          <div class="item-about">бесплатно</div>
-          <div class="item-logo">
-            <img src="./img/item-logo-delivery.png" width="78" height="63" alt="">
+        <div class="item-bild"> 
+           <div class="item sales">
+            <div class="item-title">Скидки 50%</div>
+            <div class="item-about">на 350 товаров</div>
+            <div class="item-logo">
+              <img src="./img/item-logo-discounts.png" width="59" height="72" alt="">
+            </div>
+          </div>
+          <div class="item deliver">
+            <div class="item-title">Доставка</div>
+            <div class="item-about">бесплатно</div>
+            <div class="item-logo">
+              <img src="./img/item-logo-delivery.png" width="78" height="63" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -224,10 +239,10 @@
               <div class="about-items"> 
                   <h2>Доставка</h2>
                   <p>
-                    Мы с удовольствием доставим ваш товар прямо <br>
-                    к вашему подъезду совершенно бесплатно!<br>
-                    Ведь мы неплохо заработаем, <br>
-                    поднимая его на ваш на этаж!<br>
+                    Мы с удовольствием доставим ваш товар прямо 
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем, 
+                    поднимая его на ваш на этаж!
                   </p>
               </div>
                 <div class="about-icon delivery">
@@ -239,8 +254,8 @@
               <div class="about-items">  
                 <h2>Гарантия</h2>
                 <p>
-                  Если купленный у нас товар поломается или заискрит,<br>
-                  а также в случае пожара, спровоцированного его возгаранием, <br> вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый. <br>
+                  Если купленный у нас товар поломается или заискрит,
+                  а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. 
                   Дом уж восстановите как-нибудь сами
                 </p>
             </div>
@@ -266,50 +281,54 @@
       </div>
      </main>
      <main class="conteiner contact">
-     <section class="contact-about">
-     <h2>КОМПАНИЯ «Техномарт»</h2>
-      <p>
-        Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными  любителей сэкномить на гастарбайтерах.
-      </p>
-      <p>
-        Мы можем доставить ваш товар в самые отдаленные точки России!
-        Техномарт работает со многими транспортными компаниями: 
-      </p>
-      <ul class="contact-list">
-        <li>Деловые линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="a-pop" href="#">Подробнее о компании</a>
-     </section>
-     <section class="contact-map">
-      <h2>Контакты</h2>
-      <p>
-        Вы можете забрать товар сами, <br>
-        заехав в наш офис:
-      </p>
-      <img src="./img/mini-map.jpg" width="300" height="158">
-      <a class="a-pop" href="#">Заблудились? Напишите нам!</a>
-     </section>
-      <section class="map">
-        <a href="" >
-          <img src="./img/map-popup.jpg" width="970" height="476" alt="">
-        </a>
-          <form class="map-form" action="" method="post">
-            <label for='name'>Ваше имя:</label>
-            <br>
-            <input type='text'  id='name' name='name' placeholder="Представьтесь пожалуйста" >
-            <br>
-            <label for='email'>Ваш e-mail:</label>
-            <br>
-            <input type='email' id='email' name='email' >
-            <br>
-            <label for='text'>Текст письма:</label>
-            <br>
-            <textarea rows=  cols= id='text'  name='text'>В свободной форме</textarea>
-            <br>
-            <button class="btn" type="submit">Отправить</button>
-        </form>
+      <section class="section-contact">
+       <section class="contact-about">
+       <h2>КОМПАНИЯ «Техномарт»</h2>
+        <p>
+          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными  любителей сэкномить на гастарбайтерах.
+        </p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России!
+          Техномарт работает со многими транспортными компаниями: 
+        </p>
+        <ul class="contact-list">
+          <li>Деловые линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="a-pop" href="#">Подробнее о компании</a>
+       </section>
+       <section class="contact-map">
+        <h2>Контакты</h2>
+        <p>
+          Вы можете забрать товар сами, <br>
+          заехав в наш офис:
+        </p>
+        <img src="./img/mini-map.jpg" width="300" height="158">
+        <a class="a-pop" href="#">Заблудились? Напишите нам!</a>
+       </section>
+      </section>
+      <section class="map"><img src="./img/map-popup.jpg" width="940" height="446" alt=""></section>
+      <section class="write-us">
+        <form class="contact-form" action="" method="post">
+          <div class="write-content">
+            <div class="name">
+              <label for='name'>Ваше имя:</label>
+              <input type='text'  id='name' name='name' placeholder="Представьтесь пожалуйста" >
+            </div>
+            <div class="email">
+              <label for='email'>Ваш e-mail:</label>
+              <input type='email' id='email' name='email' placeholder="Для отправки ответа" >
+            </div>
+            <div class="text">
+              <label for='text'>Текст письма:</label> 
+              <textarea id='text'  name='text' placeholder="В свободной форме" ></textarea>
+            </div>
+          </div>
+          <div class="write-us-btn">
+            <button class="a-pop" type="submit">Отправить</button>
+          </div>
+        </form> 
       </section>
   	</main>
 	<footer class="main-footer">

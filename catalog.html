@@ -13,12 +13,13 @@
             <a class="logo">Техномарт</a>
           </div>
           <form>
+            <label class="search" for="q"></label>
             <input type="search" name="q" placeholder="Поиск:"> 
-            <input type="submit" value="Найти">
+            <input class="q" id="q" type="submit" value="Найти">
           </form>
           <div class="buy">
-            <a class="buy-item" href="#">Закладки</a>
-            <a class="buy-item" href="#">Корзина</a>
+            <a class="buy-item" href="#">Закладки: 0</a>
+            <a class="buy-item" href="#">Корзина: 0</a>
             <a class="buys" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -91,58 +92,82 @@
             <a class="current">Перфораторы</a>
           </li>
         </ul>
-      </div>
-      <div class="pop-main">
+      </div> 
+      <div class="pop-main catalog">
           <span class="pop-title">Перфораторы</span>
       </div>
       <section class="filter">
-        <h2>Фильтр</h2>
-        <b class="filter-title">Цена:</b>
-        <input type="range" min="0" max="1000" step="10" value="50"> 
-        <form action="https://echo.htmlacademy.ru" method="post">
+         <form action="form.php" method="GET">
+        <div class="goods-title filter">
+          <span class ="filter-title">Фильтр</span>
+        </div>
         <fieldset>
-          <legend>
-            <b class="filter-title">Производители:</b>
+        <legend class="legend-price">Цена:</legend>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar" style="margin-left: 0%; width: 80%"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от<input name="min-price" type="text" value="0"></label>
+            <span>—</span>
+            <label class="max-price">до<input name="max-price" type="text" value="15000"></label>
+          </div>
+        </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-brand">
+            Производители:
           </legend>
           <ul>
             <li>
-              <input id="BOSCH" type='checkbox' name='BOSCH' checked>
+              <input id="BOSCH" type='checkbox' name='BOSCH'>
+              <label for="BOSCH" class="checkbox-indicator"></label>
               <label for="BOSCH">BOSCH</label>
             </li>
             <li>
-              <input id="interscol" type='checkbox' name='interscol' >
+              <input id="interscol" type='checkbox' name='interscol'>
+              <label for="interscol" class="checkbox-indicator"></label>
               <label for="interscol">ИНТЕРСКОЛ</label>
             </li>
             <li>
-              <input id="MAKIta" type='checkbox' name='MAKIta' checked>
-              <label for="  MAKIta">MAKIta</label>
+              <input id="MAKIta" type='checkbox' name='MAKIta'>
+              <label for="MAKIta" class="checkbox-indicator"></label>
+              <label for="MAKIta">MAKIta</label>
             </li>
             <li>
               <input id="Dewalt" type='checkbox' name='Dewalt'>
+              <label for="Dewalt" class="checkbox-indicator"></label>
               <label for="Dewalt">Dewalt</label>
             </li>
             <li>
               <input id="Hitachi" type='checkbox' name='Hitachi'>
+              <label for="Hitachi" class="checkbox-indicator" ></label>
               <label for="Hitachi">Hitachi</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
-          <legend>
-            <b class="filter-title">Питание:</b>
+          <legend class="legend-food">
+             Питание: 
           </legend>
           <ul>
             <li>
               <input id="acum" type="radio" name="product-group" value="acum">
+              <label for="acum" class="checkbox-indicator"></label>
               <label for="acum">Аккумуляторные</label>
             </li>
             <li>
               <input id="net" type="radio" name="product-group" value="net">
+              <label for="net" class="checkbox-indicator"></label>
               <label for="net">Сетевые</label>
             </li>
           </ul> 
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="form-btn" type="submit">Показать</button>
       </form>
       </section>
       <section class="goods">
@@ -150,7 +175,7 @@
           <span class="goods-filter-title">Сортировка</span>
           <div class="goods-filter">
             <a class="current" href="#">по цене</a>
-            <a href="#">по ттипу</a>
+            <a href="#">по типу</a>
             <a href="#">по функционалу</a>
             <div class="icons-updaun">
               <div  class="icon-up current">up</div>
@@ -167,7 +192,6 @@
           <div class="image">
             <img src="./img/snippet-2.jpg" width="127" height="112" alt=""  >
           </div>
-
             <div class="good-model-title">Перфоратор BOSCH</div>
             <div class="good-model">BFG 2000</div>
             <div class="old-price"></div>
@@ -297,9 +321,19 @@
           <a class="current" >1</a>
           <a href="#">2</a>
           <a href="#">3</a>
-          <a href="#">Следующая</a>
+          <a class="pagin-step" href="#">Следующая</a>
         </div>
       </section>
+      <div class="cart">
+        <div class="cart-content">
+          <div class="cart-icon"></div>
+          <span>Товар добавлен в корзину!</span>
+        </div>
+        <div class="cart-btn">
+          <a class="a-pop" href="">Оформить заказ</a>
+          <a class="a-pop" href="">Продолжить покупки</a>
+        </div>
+      </div>
       </main>
       <section class="about-catalog">
         <div class="conteiner">
@@ -358,7 +392,7 @@
         </section>
         <section class="footer-contacts">
           <p>Разработано:</p>
-          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
         </section>
       </div>
     </div>
