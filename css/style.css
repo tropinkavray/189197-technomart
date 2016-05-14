@@ -1375,7 +1375,12 @@ legend {
   display: flex;
   flex-direction: column;
 }
-.section-contact {
+.section-contact { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-contact-show {
   display: none;
 }
 .contact-map {
@@ -1714,18 +1719,60 @@ a.main {
   border-top: 7px solid #ee3643;
   box-shadow: 0 14px 50px -11px;
 }
+.write-us-show {
+  display: block;
+  animation: write-us-up 0.6s;
+}
+
+.write-us-animations {
+
+}
+@keyframes write-us-up{
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .map {
+  display: none;
   position: relative;
 
   height: 446px;
 
   box-shadow: 0 14px 50px -11px;
 }
+.map-show {
+  display: block;
+}
+.map-close,
+ .write-us-close{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
 .cart::after,
-.write-us::after,
-.map::after {
-  right: 5px;
-  top: 17px;
+.write-us-close::after,
+.map-close::after {
+  right: -3px;
+  top: 8px;
   position: absolute;
   content: "";
 
@@ -1739,10 +1786,10 @@ a.main {
 }
 
 .cart::before,
-.write-us::before,
-.map::before {
-  right: 5px;
-  top: 17px;
+.write-us-close::before,
+.map-close::before {
+  right: -3px;
+  top: 8px;
   position: absolute;
   content: "";
 
@@ -1841,7 +1888,8 @@ a.main {
 .write-content {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-between;
+  margin-bottom: 37px;
   width: auto;
   padding: 0 80px;
 }
@@ -1850,9 +1898,8 @@ a.main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  padding-top: 47px;
-  padding-bottom: 37px;
+  background-color: white;
+  padding-top: 47px; 
 }
 .name,
 .email,
@@ -1891,7 +1938,7 @@ a.main {
 }
 .write-us-btn {
   padding: 37px 80px;
-
+  width: 100%;
   background-color: #f1f1f1;
 }
 .write-us .a-pop {

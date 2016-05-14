@@ -304,13 +304,18 @@
           Вы можете забрать товар сами, <br>
           заехав в наш офис:
         </p>
-        <img src="./img/mini-map.jpg" width="300" height="158">
-        <a class="a-pop" href="#">Заблудились? Напишите нам!</a>
+        <a class="map-link" href="#">
+          <img src="./img/mini-map.jpg" width="300" height="158">
+        </a>
+        <a class="a-pop write-us-link" href="#">Заблудились? Напишите нам!</a>
        </section>
       </section>
-      <section class="map"><img src="./img/map-popup.jpg" width="940" height="446" alt=""></section>
+      <section class="map">
+        <button type="button" class="map-close" title="Закрыть">Закрыть</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2238.013238238495!2d37.05109431552398!3d55.8797849805875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5698dd6fcd283%3A0x5c15e08a34167f9b!2zNjcsINCb0LXQvdC40L3Qviwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTQzNTkx!5e0!3m2!1sru!2sru!4v1463245648971" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe></section>
       <section class="write-us">
-        <form class="contact-form" action="" method="post">
+        <button type="button" class="write-us-close" title="Закрыть">Закрыть</button>
+        <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="write-content">
             <div class="name">
               <label for='name'>Ваше имя:</label>
@@ -384,5 +389,70 @@
       </div>
     </div>
 	</footer> 
+  <script type="text/javascript">
+    var maplink =  document.querySelector(".map-link");
+    var  map =  document.querySelector(".map");
+    var  section_contact =  document.querySelector(".section-contact");
+    var map_close =  document.querySelector(".map-close");
+
+      maplink.addEventListener("click", function(event){
+        event.preventDefault();
+
+        section_contact.classList.add("section-contact-show");
+        map.classList.add("map-show");
+      });
+      map_close.addEventListener("click", function(event){
+        event.preventDefault();
+
+        section_contact.classList.remove("section-contact-show");
+        map.classList.remove("map-show");
+      }); 
+    var write_us_link =  document.querySelector(".write-us-link");
+    var write_us =  document.querySelector(".write-us");
+    var write_us_close =  write_us.querySelector(".write-us-close");
+    var name_write_us =  write_us.querySelector("[name=name]");
+    var email_write_us =  write_us.querySelector("[name=email]");
+    var text_write_us =  write_us.querySelector("[name=text]");
+    var form_write_us =  write_us.querySelector("form");
+    var storage_name_write_us = localStorage.getItem("name_write_us");
+    var storage_email_write_us = localStorage.getItem("email_write_us");
+      
+      write_us_link.addEventListener("click", function(event){
+        event.preventDefault();
+
+        write_us.classList.add("write-us-show");
+       
+        if (storage_name_write_us) {
+          name_write_us.value=storage_name_write_us;
+        } else {
+           name_write_us.focus();
+        };
+
+      });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (write_us.classList.constains("write-us-show")) {
+            write_us.classList.remove("write-us-show");
+          }
+        }
+      });
+      write_us_close.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        write_us.classList.remove("write-us-show");
+      }); 
+        form_write_us.addEventListener("submit", function(event){
+        if (!name_write_us.value || !name_write_us.value || !text_write_us.value ) {
+          event.preventDefault();
+          console.log("ВВеди в поля")
+        } else {
+          localStorage.setItem("name_write_us", name_write_us.value);
+          localStorage.setItem("email_write_us", email_write_us.value);
+        }
+
+        write_us.classList.remove("write-us-show");
+      }); 
+    
+  </script>
   </body>
 </html>
