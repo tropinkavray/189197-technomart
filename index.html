@@ -14,9 +14,8 @@
             <a class="logo">Техномарт</a>
           </div>
           <form>
-            <label class="search" for="q"></label>
-            <input type="search" name="q" placeholder="Поиск:"> 
-            <input class="q" id="q" type="submit" value="Найти">
+            <input  type="search" name="q" placeholder="Поиск:"> 
+            <button class="q" id="q" type="submit" value="Найти">Найти</button> 
           </form>
           <div class="buy">
             <a class="buy-item" href="#">Закладки: 0</a>
@@ -51,7 +50,7 @@
                 <a href="#">Компания</a>
               </li>
               <li>
-                <a href="#">Каталог</a>
+                <a href="./catalog.html">Каталог</a>
               </li>
               <li>
                 <a href="#">Новости</a>
@@ -107,7 +106,9 @@
           </div>
           <div class="slider-inner">
             <div class="gallery-content">
-              <img src="./img/item-slide-1.jpg" width="620" height="266" alt="">
+              <a class="text-slider slide-1" data-title="Перфораторы" data-description="Настоящие мужские игружки" ></a>
+              <a class="text-slider slide-2" data-title="Дрели" data-description="Соседям на радость!" ></a>
+              <img  src="./img/item-slide-1.jpg" width="620" height="266" alt="" >
               <img src="./img/item-slide-2.jpg" width="620" height="266" alt="">
             </div>
           </div>
@@ -222,7 +223,7 @@
         </article>
       </section>
     </main>
-    <main class="about">
+    <div class="about">
         <div class="conteiner">
           <section class="about-section">
             <h2>Сервисы</h2>
@@ -231,7 +232,7 @@
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
             <ul class="about-menu">
-              <li><a class="current" href="#">Доставка</a></li>
+              <li><a class="current">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
               <li><a href="#">Кредит</a></li>
             </ul>
@@ -279,8 +280,8 @@
             </div>
         </section>
       </div>
-     </main>
-     <main class="conteiner contact">
+     </div>
+     <div class="conteiner contact">
       <section class="section-contact">
        <section class="contact-about">
        <h2>КОМПАНИЯ «Техномарт»</h2>
@@ -305,7 +306,7 @@
           заехав в наш офис:
         </p>
         <a class="map-link" href="#">
-          <img src="./img/mini-map.jpg" width="300" height="158">
+          <img src="./img/mini-map.jpg" width="300" height="158" alt="Как проехать">
         </a>
         <a class="a-pop write-us-link" href="#">Заблудились? Напишите нам!</a>
        </section>
@@ -335,7 +336,7 @@
           </div>
         </form> 
       </section>
-  	</main>
+  	</div>
 	<footer class="main-footer">
     <div class="footer-head">
       <div class="conteiner">
