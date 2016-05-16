@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Техномарт</title>
   </head>
@@ -305,10 +306,10 @@
           Вы можете забрать товар сами, <br>
           заехав в наш офис:
         </p>
-        <a class="map-link" href="#">
+        <a class="map-link" href="./img/map-popup.jpg" target="_blank">
           <img src="./img/mini-map.jpg" width="300" height="158" alt="Как проехать">
         </a>
-        <a class="a-pop write-us-link" href="#">Заблудились? Напишите нам!</a>
+        <a class="a-pop write-us-link" href="form.html">Заблудились? Напишите нам!</a>
        </section>
       </section>
       <section class="map">
@@ -390,70 +391,6 @@
       </div>
     </div>
 	</footer> 
-  <script type="text/javascript">
-    var maplink =  document.querySelector(".map-link");
-    var  map =  document.querySelector(".map");
-    var  section_contact =  document.querySelector(".section-contact");
-    var map_close =  document.querySelector(".map-close");
-
-      maplink.addEventListener("click", function(event){
-        event.preventDefault();
-
-        section_contact.classList.add("section-contact-show");
-        map.classList.add("map-show");
-      });
-      map_close.addEventListener("click", function(event){
-        event.preventDefault();
-
-        section_contact.classList.remove("section-contact-show");
-        map.classList.remove("map-show");
-      }); 
-    var write_us_link =  document.querySelector(".write-us-link");
-    var write_us =  document.querySelector(".write-us");
-    var write_us_close =  write_us.querySelector(".write-us-close");
-    var name_write_us =  write_us.querySelector("[name=name]");
-    var email_write_us =  write_us.querySelector("[name=email]");
-    var text_write_us =  write_us.querySelector("[name=text]");
-    var form_write_us =  write_us.querySelector("form");
-    var storage_name_write_us = localStorage.getItem("name_write_us");
-    var storage_email_write_us = localStorage.getItem("email_write_us");
-      
-      write_us_link.addEventListener("click", function(event){
-        event.preventDefault();
-
-        write_us.classList.add("write-us-show");
-       
-        if (storage_name_write_us) {
-          name_write_us.value=storage_name_write_us;
-        } else {
-           name_write_us.focus();
-        };
-
-      });
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (write_us.classList.constains("write-us-show")) {
-            write_us.classList.remove("write-us-show");
-          }
-        }
-      });
-      write_us_close.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        write_us.classList.remove("write-us-show");
-      }); 
-        form_write_us.addEventListener("submit", function(event){
-        if (!name_write_us.value || !name_write_us.value || !text_write_us.value ) {
-          event.preventDefault();
-          console.log("ВВеди в поля")
-        } else {
-          localStorage.setItem("name_write_us", name_write_us.value);
-          localStorage.setItem("email_write_us", email_write_us.value);
-        }
-
-        write_us.classList.remove("write-us-show");
-      }); 
-    
-  </script>
+  <script src="./js/script-min.js"></script>
   </body>
 </html>
