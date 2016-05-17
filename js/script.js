@@ -1,3 +1,22 @@
+          var btn_buy = document.querySelectorAll('.btn-buy'), index, button;
+      var cart =  document.querySelector(".cart");
+      var cart_close =  document.querySelector(".cart-close");
+
+      for (index = 0; index < btn_buy.length; index++) {
+          button = btn_buy[index];
+          button.addEventListener('click', clickHandler); 
+      }
+
+      function clickHandler(event) {
+          console.log('click', this.innerText);
+          event.preventDefault();
+          cart.classList.add("cart-show");
+      }
+      cart_close.addEventListener("click", function(event){
+              event.preventDefault();
+              cart.classList.remove("cart-show");
+            }); 
+
     var maplink =  document.querySelector(".map-link");
     var  map =  document.querySelector(".map");
     var map_close =  document.querySelector(".map-close");
@@ -59,3 +78,4 @@
 
         write_us.classList.remove("write-us-show");
       }); 
+
