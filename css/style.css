@@ -66,8 +66,9 @@ h2 {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-
-  width: 940px;
+ 
+  min-width: 920px;
+  max-width: 940px;
   margin: 0 auto;
   padding: 0 10px;
 
@@ -81,19 +82,16 @@ h2 {
   background: #293449;
 }
 .header-buy .conteiner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-      flex-wrap: wrap;
-
+      flex-wrap: wrap; 
   align-items: center;
   -webkit-box-align: center;
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
   -ms-flex-align: center;
   -ms-flex-wrap: wrap;
+
 }
 main.conteiner {
   -ms-flex-direction: row;
@@ -1509,12 +1507,15 @@ legend {
   margin-bottom: 20px;
 
   border: 1px solid #e7e7e7;
-
+margin-right: 10px;
   align-items: center;
   -webkit-box-align: center;
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -ms-flex-align: center;
+}
+.catalog-good:last-child {
+  margin-right: 0;
 }
 .actions {
   display: none;
@@ -2277,13 +2278,8 @@ a.main {
 }
 /*товар в корзине, обратная форма, карта*/
 .cart,
-.write-us {
-  top: 47px;
-  position: relative;
-  position: fixed;
-  z-index: 20;
-  left: 358px;
-
+.write-us { 
+  z-index: 20;  
   display: none;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -2296,58 +2292,26 @@ a.main {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
 }
+.cart {
+  position: fixed;
+  right: 50%;
+  margin-right:-310px;
+  top:50px;
+}
+.write-us {
+  position: absolute;
+  margin-right: -310px;
+  right: 50%;
+  top: 2497px;
+}
 .write-us-show {
   display: block;
-
-  -webkit-animation: write-us-up 0.6s;
-          animation: write-us-up 0.6s;
 }
 .cart-show {
   display: block;
 }
 
-@-webkit-keyframes write-us-up {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
-  70% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-
-@keyframes write-us-up {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
-  70% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-.map {
-  position: relative;
-
+.map {  
   display: none;
 
   height: 446px;
@@ -2355,11 +2319,11 @@ a.main {
   box-shadow: 0 14px 50px -11px;
 }
 .map-show {
-  right: 204px;
-  top: 25px;
-  position: fixed;
+  margin-right: -470px;
+  top: 2357px;
+  position: absolute;
   z-index: 10;
-
+  right: 50%;
   display: block;
 }
 .map-link {
